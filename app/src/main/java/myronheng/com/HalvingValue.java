@@ -15,10 +15,6 @@ public class HalvingValue {
         this.value = value;
     }
 
-    public void newHalvingValue(int value) {
-        this.value = value / 2;
-    }
-
     public int useHalvingValue() {
         this.value /= 2;
         return value;

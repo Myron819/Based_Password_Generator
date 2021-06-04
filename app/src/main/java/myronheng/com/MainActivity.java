@@ -12,8 +12,8 @@ public class MainActivity extends AppCompatActivity {
     EditText tvLength;
     Button btnShorter, btnLonger, btnSet;
 
-    HalvingValue hv;
-    RandomSequence rs;
+    HalvingValue hv = new HalvingValue(0);
+    RandomSequence rs = new RandomSequence(0);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,13 +29,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int length = Integer.parseInt(tvLength.getText().toString());
-                hv = new HalvingValue(length);
+                hv.setValue(length);
+                rs = new RandomSequence(length);
             }
         });
 
         btnShorter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                int newlength = / hv.useHalvingValue();
+//                rs.newSequence();
 
             }
         });
